@@ -1,0 +1,105 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Inter', sans-serif; */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+body h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.container {
+  perspective: 1200px;
+}
+
+.frame {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 600px;
+  animation: frameSpin 5s alternate infinite;
+  /* transform: rotateY(30deg); */
+  transform-style: preserve-3d;
+}
+
+.ball {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  animation: rotation 2s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.ball div {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  opacity: 0.3;
+  background: red;
+  position: absolute;
+}
+
+.circle1 {
+  transform: rotateX(0deg);
+}
+.circle2 {
+  transform: rotateX(30deg);
+}
+.circle3 {
+  transform: rotateX(60deg);
+}
+.circle4 {
+  transform: rotateX(90deg);
+}
+.circle5 {
+  transform: rotateX(120deg);
+}
+.circle6 {
+  transform: rotateX(150deg);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes frameSpin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(60deg);
+  }
+}
+
+.textsInfo {
+  padding: 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.textsInfo p {
+  text-align: center;
+}
+
+.textsInfo h1 {
+  color: #f0db4f;
+}
